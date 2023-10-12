@@ -4,8 +4,8 @@ const app = express()
 
 // Heroku dynamically sets a port
 const PORT = process.env.PORT || 5000
+app.use(express.static(process.cwd() + '/dist'))
 
-app.use(express.static('dist'))
 // app.use(cors)
 
 app.listen(PORT, () => {
